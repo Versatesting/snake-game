@@ -31,7 +31,7 @@ def main():
         help="game mode (default: normal)",
     )
     args = parser.parse_args()
-
+#################
     conf = GameConf()
     conf.solver_name = dict_solver[args.s]
     conf.mode = dict_mode[args.m]

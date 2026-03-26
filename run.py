@@ -1,4 +1,4 @@
-import argparse
+#import argparse
 
 from snake.game import Game, GameConf, GameMode
 
@@ -17,7 +17,7 @@ def main():
         "train_dqn_gui": GameMode.TRAIN_DQN_GUI,
     }
 
-    parser = argparse.ArgumentParser(description="Run snake game agent.")
+    #parser = argparse.ArgumentParser(description="Run snake game agent.")
     parser.add_argument(
         "-s",
         default="hamilton",
@@ -30,14 +30,7 @@ def main():
         choices=dict_mode.keys(),
         help="game mode (default: normal)",
     )
-    args = parser.parse_args()
-
-    conf = GameConf()
-    conf.solver_name = dict_solver[args.s]
-    conf.mode = dict_mode[args.m]
-    print(f"Solver: {conf.solver_name}   Mode: {conf.mode}")
-
-    Game(conf).run()
+    args 
 
 
 if __name__ == "__main__":
